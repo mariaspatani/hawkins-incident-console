@@ -146,5 +146,14 @@ This feature enhances immersion and storytelling without relying on copyrighted 
 ---
 
 ## 📂 Project Structure
+hawkins-incident-console/
+│
+├── index.html
+├── README.md
+├── LICENSE
+├── assets/
+│ └── screenshots/
+└── docs/
+└── design-notes.md
 
 
