@@ -459,7 +459,7 @@ body {
     rgba(239, 68, 68, 0.95)
   );
   box-shadow: 0 0 22px rgba(248, 113, 113, 0.9);
-  transition: width 240ms ease-out;
+  transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .meter-marker {
@@ -471,7 +471,7 @@ body {
   background: #fef3c7;
   box-shadow: 0 0 12px rgba(250, 250, 210, 0.8);
   transform: translateX(-50%);
-  transition: left 240ms ease-out;
+  transition: left 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .threat-scale {

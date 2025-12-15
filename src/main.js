@@ -118,7 +118,7 @@ function loadIncidents() {
 function saveIncidents() {
   try {
     localStorage.setItem(INCIDENT_STORAGE_KEY, JSON.stringify(incidents));
-  } catch (e) {}
+  } catch (e) { }
 }
 
 function formatTimestamp(ts) {
@@ -179,7 +179,7 @@ function renderIncidents() {
     empty.style.color = "#9ca3c5";
     empty.textContent = "No incidents match the current filters.";
     incidentListEl.appendChild(empty);
-    updateThreatMeter();
+    updateThreatMeter(incidents);
     return;
   }
 
@@ -222,7 +222,7 @@ function renderIncidents() {
     incidentListEl.appendChild(row);
   });
 
-  updateThreatMeter();
+  updateThreatMeter(incidents);
 }
 
 function autoTags(incident) {
@@ -289,36 +289,41 @@ function renderDetail(incident) {
   )} \u00b7 ${incident.location}`;
 }
 
-function updateThreatMeter() {
-  if (!incidents.length) {
-    threatValueEl.textContent = "LOW";
-    meterFillEl.style.width = "20%";
-    meterMarkerEl.style.left = "20%";
-    breachWarningEl.style.display = "none";
-    return;
-  }
+function updateThreatMeter(currentIncidents) {
+  if (!currentIncidents) currentIncidents = [];
 
-  const weights = { Low: 1, Medium: 3, Critical: 7 };
-  const totalWeight = incidents.reduce(
-    (sum, inc) => sum + (weights[inc.threat] || 1),
-    0
-  );
-  const maxPossible = incidents.length * weights["Critical"];
-  const ratio = maxPossible ? totalWeight / maxPossible : 0;
-  const percent = 20 + ratio * 70;
-
-  meterFillEl.style.width = `${percent}%`;
-  meterMarkerEl.style.left = `${percent}%`;
+  let score = 0;
+  currentIncidents.forEach((inc) => {
+    if (inc.threat === "Low") score += 10;
+    else if (inc.threat === "Medium") score += 25;
+    else if (inc.threat === "Critical") score += 50;
+  });
 
   let label = "LOW";
-  if (ratio > 0.35 && ratio <= 0.7) {
-    label = "MEDIUM";
-  } else if (ratio > 0.7) {
-    label = "CRITICAL";
-  }
-  threatValueEl.textContent = label;
+  let colorVar = "var(--threat-low)";
+  let width = "20%";
 
-  breachWarningEl.style.display = ratio > 0.7 ? "flex" : "none";
+  if (score > 70) {
+    label = "CRITICAL";
+    colorVar = "var(--threat-critical)";
+    width = "100%";
+  } else if (score > 30) {
+    label = "MEDIUM";
+    colorVar = "var(--threat-medium)";
+    width = "60%";
+  } else {
+    // defaults for LOW
+    label = "LOW";
+    colorVar = "var(--threat-low)";
+    width = "30%";
+  }
+
+  threatValueEl.textContent = label;
+  meterFillEl.style.width = width;
+  meterFillEl.style.background = colorVar;
+  meterMarkerEl.style.left = width;
+
+  breachWarningEl.style.display = score > 70 ? "flex" : "none";
 }
 
 function handleFormSubmit(event) {
