@@ -221,27 +221,27 @@ Mobile screens
 
 ---
 📂 Project Structure
+
 hawkins-incident-console/
 │
 ├── .vscode/
-│   └── launch.json
+│ └── launch.json
 │
 ├── assets/
-│   └── screenshots/
-│       └── .gitkeep
+│ └── screenshots/
+│ └── .gitkeep
 │
 ├── docs/
-│   └── design-notes.md
+│ └── design-notes.md
 │
 ├── src/
-│   ├── index.html
-│   ├── main.js
-│   └── styles.css
+│ ├── index.html
+│ ├── main.js
+│ └── styles.css
 │
 ├── .gitignore
 ├── LICENSE
 └── README.md
-
 ---
 ⚠️ Disclaimer
 
