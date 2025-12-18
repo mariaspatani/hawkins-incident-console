@@ -246,9 +246,10 @@ hawkins-incident-console/
 ├── LICENSE
 └── README.md
 
+```
 ---
-⚠️ Disclaimer
 
+⚠️ Disclaimer
 This project is a fictional simulation created for educational and creative purposes.
 All incidents, names, and events are inspired by popular culture and do not represent real-world data.
 
