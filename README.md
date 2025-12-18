@@ -225,11 +225,20 @@ Mobile screens
 
 ```text
 hawkins-incident-console/
-├── index.html
-├── style.css
-├── script.js
-├── README.md
-└── .gitignore
+│
+├── index.html              # Main entry point of the web application
+├── styles.css              # Styling for the Incident Command Console UI
+├── main.js                 # JavaScript logic (incidents, filters, interactions)
+│
+├── assets/                 # Static assets
+│   └── screenshots/        # Reserved for UI screenshots (optional)
+│
+├── docs/                   # Project-related documentation (optional)
+│
+├── README.md               # Project documentation
+├── LICENSE                 # MIT License
+└── .gitignore              # Git ignore configuration
+
 
 ```
 ---
