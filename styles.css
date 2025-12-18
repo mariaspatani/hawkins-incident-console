@@ -712,41 +712,61 @@ body.upside-down .incident-row[data-threat="Critical"] {
 }
 
 @media (max-width: 768px) {
+
+  html,
+  body {
+    height: auto;
+    min-height: 100%;
+    overflow-y: auto;
+    /* Allow natural page scrolling */
+  }
+
+  .shell {
+    height: auto;
+    overflow: visible;
+  }
+
   .top-bar {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.35rem;
+    position: sticky;
+    top: 0;
+    z-index: 50;
   }
 
   .layout {
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-      "threat"
-      "list"
-      "details";
-    overflow-y: auto;
-    display: block;
-    /* Fallback/Simplification for scrolling main */
-  }
-
-  /* Reset layout to grid for area placement */
-  .layout {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
+    padding: 1rem;
+    height: auto;
+    overflow: visible;
+  }
+
+  /* Reset any grid properties from desktop */
+  .panel {
+    min-height: 0;
+    /* reset */
+    height: auto;
   }
 
   .panel.sidebar {
-    grid-area: threat;
+    order: 1;
+    /* Threat meter first */
   }
 
   .panel.list {
-    grid-area: list;
+    order: 2;
+    /* Incident list second */
     min-height: 400px;
+    max-height: 80vh;
+    /* Allow list to be tall but not infinite */
   }
 
   .panel.details {
-    grid-area: details;
+    order: 3;
+    /* Details last */
   }
 
   /* Adjust table for small screens */
