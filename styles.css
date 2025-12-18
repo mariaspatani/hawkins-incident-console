@@ -136,11 +136,9 @@ body {
 .divider {
   height: 1px;
   margin: 0.4rem 0 0.45rem;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.06),
-    rgba(255, 255, 255, 0.02)
-  );
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.02));
 }
 
 .filters {
@@ -311,13 +309,11 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.18em;
   color: #fecaca;
-  background: repeating-linear-gradient(
-      -45deg,
+  background: repeating-linear-gradient(-45deg,
       rgba(127, 29, 29, 0.6),
       rgba(127, 29, 29, 0.6) 8px,
       rgba(127, 29, 29, 0.2) 8px,
-      rgba(127, 29, 29, 0.2) 16px
-    ),
+      rgba(127, 29, 29, 0.2) 16px),
     radial-gradient(circle at 0 0, #3f1515 0, #1b0b0b 65%);
   border-radius: 0.5rem;
   padding: 0.35rem 0.6rem;
@@ -439,12 +435,10 @@ body {
   position: relative;
   height: 0.65rem;
   border-radius: 999px;
-  background: linear-gradient(
-    to right,
-    rgba(22, 163, 74, 0.3),
-    rgba(250, 204, 21, 0.25),
-    rgba(239, 68, 68, 0.4)
-  );
+  background: linear-gradient(to right,
+      rgba(22, 163, 74, 0.3),
+      rgba(250, 204, 21, 0.25),
+      rgba(239, 68, 68, 0.4));
   overflow: hidden;
 }
 
@@ -452,12 +446,10 @@ body {
   position: absolute;
   inset: 0;
   width: 40%;
-  background: linear-gradient(
-    to right,
-    rgba(74, 222, 128, 0.4),
-    rgba(250, 204, 21, 0.6),
-    rgba(239, 68, 68, 0.95)
-  );
+  background: linear-gradient(to right,
+      rgba(74, 222, 128, 0.4),
+      rgba(250, 204, 21, 0.6),
+      rgba(239, 68, 68, 0.95));
   box-shadow: 0 0 22px rgba(248, 113, 113, 0.9);
   transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -501,13 +493,11 @@ body {
   width: 10px;
   height: 18px;
   border-radius: 999px;
-  background: repeating-linear-gradient(
-    -45deg,
-    #fecaca,
-    #fecaca 4px,
-    #991b1b 4px,
-    #991b1b 8px
-  );
+  background: repeating-linear-gradient(-45deg,
+      #fecaca,
+      #fecaca 4px,
+      #991b1b 4px,
+      #991b1b 8px);
   box-shadow: 0 0 14px rgba(248, 113, 113, 1);
 }
 
@@ -693,6 +683,7 @@ body.upside-down .incident-row[data-threat="Critical"] {
   from {
     box-shadow: 0 0 16px rgba(248, 113, 113, 0.7);
   }
+
   to {
     box-shadow: 0 0 30px rgba(248, 113, 113, 1);
   }
@@ -729,8 +720,56 @@ body.upside-down .incident-row[data-threat="Critical"] {
 
   .layout {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: minmax(0, 1fr) auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "threat"
+      "list"
+      "details";
+    overflow-y: auto;
+    display: block;
+    /* Fallback/Simplification for scrolling main */
+  }
+
+  /* Reset layout to grid for area placement */
+  .layout {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .panel.sidebar {
+    grid-area: threat;
+  }
+
+  .panel.list {
+    grid-area: list;
+    min-height: 400px;
+  }
+
+  .panel.details {
+    grid-area: details;
+  }
+
+  /* Adjust table for small screens */
+  .table-header,
+  .incident-row {
+    grid-template-columns: 1fr 0.5fr 0.6fr;
+    /* Title, Threat, Status */
+    gap: 0.3rem;
+  }
+
+  .table-header span:nth-child(4),
+  .table-header span:nth-child(5),
+  .incident-row div:nth-child(4),
+  .incident-row div:nth-child(5) {
+    display: none;
+    /* Hide Location and Logged columns */
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .threat-meter {
+    margin-bottom: 0;
   }
 }
-
-
