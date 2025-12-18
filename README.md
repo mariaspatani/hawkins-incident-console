@@ -11,7 +11,7 @@
 
 ---
 
-🚨 Overview
+# 🚨 Overview
 
 Strange things are happening in Hawkins.
 
@@ -29,7 +29,7 @@ This project blends technical implementation, UI/UX design, and story-driven int
 ✔ Immersive, narrative-driven design
 
 ---
-🎯 Problem Statement
+# 🎯 Problem Statement
 
 Hawkins can no longer rely on walkie-talkies, paper reports, or guesswork.
 
@@ -56,8 +56,8 @@ Classified
 Believable
 
 ---
-🚀 Core Features
-🗂️ Incident Feed
+# 🚀 Core Features
+# 🗂️ Incident Feed
 
 A live feed of all reported anomalies across Hawkins jurisdiction.
 
@@ -76,7 +76,7 @@ Time logged
 Incidents are visually styled to reflect their severity for instant recognition.
 
 ---
-🔍 Advanced Filtering & Sorting
+# 🔍 Advanced Filtering & Sorting
 
 Operators can quickly narrow down incidents using:
 
@@ -89,7 +89,7 @@ Sort order (Latest → Oldest)
 This enables rapid situational awareness during escalating crises.
 
 ---
-🧾 Classified Incident File Panel
+# 🧾 Classified Incident File Panel
 
 Clicking an incident opens a restricted-access classified file.
 
@@ -108,7 +108,7 @@ Recommended response actions
 The panel is intentionally designed to resemble an official confidential report, complete with clearance warnings.
 
 ---
-➕ New Incident Logging
+# ➕ New Incident Logging
 
 Operators can log new incidents directly from the console.
 
@@ -126,7 +126,7 @@ No backend required (client-side simulation)
 
 ----
 
-⚠️ Global Threat Level Monitor
+# ⚠️ Global Threat Level Monitor
 
 A dedicated Threat Level Meter aggregates all active incidents and displays the overall danger level across Hawkins.
 
@@ -139,7 +139,7 @@ A dedicated Threat Level Meter aggregates all active incidents and displays the 
 When thresholds are exceeded, the system issues alerts such as:
 
 ---
-⚠ REALITY BREACH IMMINENT
+# ⚠ REALITY BREACH IMMINENT
 Critical incidents exceed safe containment levels.
 
 This converts raw incident data into actionable intelligence.
@@ -160,7 +160,7 @@ Subtle scan-line and glitch-inspired visuals
 
 ---
 
-🎹 Keyboard Shortcut
+# 🎹 Keyboard Shortcut
 
 Press U to toggle Upside Down Mode instantly
 
@@ -168,7 +168,7 @@ This feature enhances immersion without using copyrighted assets.
 
 ---
 
-🎨 Design Philosophy
+# 🎨 Design Philosophy
 
 Inspired by real emergency and military control rooms
 
@@ -182,7 +182,7 @@ Every UI element serves a functional purpose.
 
 ---
 
-🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 HTML5
 
@@ -198,7 +198,7 @@ Pure frontend engineering.
 
 ----
 
-📱 Responsiveness
+# 📱 Responsiveness
 
 Fully responsive layout
 
@@ -211,7 +211,7 @@ Tablet usage
 Mobile screens
 
 ----
-🧠 Why This Project Stands Out
+# 🧠 Why This Project Stands Out
 
 ✔ More than a dashboard — a narrative system
 ✔ Realistic emergency-console design
@@ -220,7 +220,6 @@ Mobile screens
 ✔ Beginner-friendly implementation with professional polish
 
 ---
-📂 Project Structure
 
 ## 📂 Project Structure
 
@@ -249,7 +248,7 @@ hawkins-incident-console/
 ```
 ---
 
-⚠️ Disclaimer
+# ⚠️ Disclaimer
 This project is a fictional simulation created for educational and creative purposes.
 All incidents, names, and events are inspired by popular culture and do not represent real-world data.
 
