@@ -225,25 +225,11 @@ Mobile screens
 
 ```text
 hawkins-incident-console/
-│
-├── .vscode/
-│   └── launch.json
-│
-├── assets/
-│   └── screenshots/
-│       └── .gitkeep
-│
-├── docs/
-│   └── design-notes.md
-│
-├── src/
-│   ├── index.html
-│   ├── main.js
-│   └── styles.css
-│
-├── .gitignore
-├── LICENSE
-└── README.md
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+└── .gitignore
 
 ```
 ---
