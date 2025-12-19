@@ -3,6 +3,7 @@
 This document captures rough design intent for the UI and interaction model.  
 It is not a spec; treat it as guidance for evolving the console.
 
+
 ### Visual Tone
 - **Atmosphere**: Low‑light emergency control room, with subtle sci‑fi elements.
 - **Color**: Deep blues and near‑black backgrounds with red/orange alert accents.
