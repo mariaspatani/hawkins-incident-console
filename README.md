@@ -9,7 +9,7 @@
 > **Monitoring Anomalies. Protecting Reality.**  
 > A classified, browser-based incident command console designed to track strange events and rising threats in and around Hawkins.
 
----
+
 
 # 🚨 Overview
 
@@ -28,7 +28,7 @@ This project blends technical implementation, UI/UX design, and story-driven int
 ✔ Real-time UI interactions
 ✔ Immersive, narrative-driven design
 
----
+
 # 🎯 Problem Statement
 
 Hawkins can no longer rely on walkie-talkies, paper reports, or guesswork.
@@ -55,7 +55,7 @@ Classified
 
 Believable
 
----
+
 # 🚀 Core Features
 # 🗂️ Incident Feed
 
@@ -75,7 +75,7 @@ Time logged
 
 Incidents are visually styled to reflect their severity for instant recognition.
 
----
+
 # 🔍 Advanced Filtering & Sorting
 
 Operators can quickly narrow down incidents using:
@@ -88,7 +88,7 @@ Sort order (Latest → Oldest)
 
 This enables rapid situational awareness during escalating crises.
 
----
+
 # 🧾 Classified Incident File Panel
 
 Clicking an incident opens a restricted-access classified file.
@@ -107,7 +107,7 @@ Recommended response actions
 
 The panel is intentionally designed to resemble an official confidential report, complete with clearance warnings.
 
----
+
 # ➕ New Incident Logging
 
 Operators can log new incidents directly from the console.
@@ -124,7 +124,6 @@ Optional localStorage persistence
 
 No backend required (client-side simulation)
 
-----
 
 # ⚠️ Global Threat Level Monitor
 
@@ -138,7 +137,6 @@ A dedicated Threat Level Meter aggregates all active incidents and displays the 
 
 When thresholds are exceeded, the system issues alerts such as:
 
----
 # ⚠ REALITY BREACH IMMINENT
 Critical incidents exceed safe containment levels.
 
@@ -158,7 +156,7 @@ Enhanced emphasis on critical incidents
 
 Subtle scan-line and glitch-inspired visuals
 
----
+
 
 # 🎹 Keyboard Shortcut
 
@@ -166,7 +164,7 @@ Press U to toggle Upside Down Mode instantly
 
 This feature enhances immersion without using copyrighted assets.
 
----
+
 
 # 🎨 Design Philosophy
 
@@ -180,7 +178,7 @@ Stranger Things–inspired atmosphere (no logos or fonts used)
 
 Every UI element serves a functional purpose.
 
----
+
 
 # 🛠️ Tech Stack
 
@@ -196,7 +194,7 @@ No frameworks.
 No backend.
 Pure frontend engineering.
 
-----
+
 
 # 📱 Responsiveness
 
@@ -210,7 +208,6 @@ Tablet usage
 
 Mobile screens
 
-----
 # 🧠 Why This Project Stands Out
 
 ✔ More than a dashboard — a narrative system
@@ -219,7 +216,7 @@ Mobile screens
 ✔ Keyboard interactions & live UI feedback
 ✔ Beginner-friendly implementation with professional polish
 
----
+
 
 ## 📂 Project Structure
 
@@ -241,17 +238,17 @@ hawkins-incident-console/
 
 
 ```
----
+
 
 # ⚠️ Disclaimer
 This project is a fictional simulation created for educational and creative purposes.
 All incidents, names, and events are inspired by popular culture and do not represent real-world data.
 
----
+
 Hawkins doesn’t just need heroes.
 It needs developers. 🛠️
 
----
+
 
 🔗 **Live Demo:**  
 https://mariaspatani.github.io/hawkins-incident-console/
